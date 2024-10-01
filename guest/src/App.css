@@ -1,0 +1,142 @@
+/* Add a background image to the entire app */
+.App {
+  text-align: center;
+  margin-top: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  
+  /* Background Image */
+  background-image: url('/images/pink_bg.webp'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling of the image */
+}
+
+/* Button styling */
+.guess-button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.7); /* Adds a translucent white background */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.guess-button:hover {
+  transform: scale(1.1);
+}
+
+/* Active button styles */
+.guess-button.active {
+  transition: transform 0.2s ease-in-out;
+}
+
+.guess-button.active:hover {
+  transform: scale(1.1);
+}
+
+.guess-button.highlighted-blue { /* Boy button */
+  background-color: rgba(0, 0, 255, 0.7); /* Blue */
+  color: white;
+}
+
+.guess-button.highlighted-pink { /* Girl button */
+  background-color: rgba(250, 141, 159, 0.822); /* Pink */
+  color: white;
+}
+
+/* Countdown styling */
+.countdown {
+  font-size: 60px;
+  color: gold;
+  animation: blink 1s step-end infinite;
+  background: rgba(0, 0, 0, 0.7); /* Adds translucent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Fake message styling */
+.fakeMessage {
+  font-size: 40px;
+  color: red;
+  margin-top: 30px;
+  animation: shake 0.5s ease-in-out 3;
+  background: rgba(255, 255, 255, 0.7); /* Adds translucent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Surprise message styling */
+.surpriseMessage {
+  font-size: 40px;
+  color: orange;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.7); /* Adds translucent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Halfway message styling */
+.halfwayMessage {
+  font-size: 40px;
+  color: purple;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.7); /* Adds translucent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Real gender reveal styling */
+.reveal-container {
+  position: relative;
+}
+
+.realMessage {
+  color: pink;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Adds translucent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.balloons {
+  font-size: 50px;
+  margin-top: 30px;
+  animation: floatUp 5s ease-in-out infinite;
+}
+
+/* Statistics styling */
+.stats {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.7); /* Adds translucent background */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100px); }
+  100% { transform: translateY(-500px); }
+}
