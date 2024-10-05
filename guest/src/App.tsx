@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 import './App.css'; // For custom animations and styles
 
-const socket = io('http://192.168.1.53:3000');
+// const socket = io(process.env.REACT_APP_MY_HOST || 'http://localhost:3000');
 
+const socket = io('http://192.168.1.53:3000');
 const App: React.FC = () => {
   const [guess, setGuess] = useState<string | null>(null);
   const [countdown, setCountdown] = useState<number | null>(null);
